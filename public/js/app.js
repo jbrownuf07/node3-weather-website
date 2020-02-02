@@ -1,26 +1,5 @@
 console.log('Client side javascript file is loaded')
 
-// function showPosition(position) {
-//     console.log(position.address.city)
-//     // console.log("Latitude: " + position.coords.latitude +
-//     // "  Longitude: " + position.coords.longitude)
-//   }
-
-// function getLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition)
-//         // navigator.geolocation.getCurrentPosition((position) => {
-//         //     console.log(position.longitude)
-//         //     console.log(position.latitude)
-//         // })
-        
-//     } else {
-//         console.log("Geolocation is not supported by this browser.")
-//     }
-// }
-
-// getLocation()
-
 const weatherForm = document.querySelector('#frmWeather')
 const inputLocation = weatherForm.querySelector('input')
 inputLocation.focus()
@@ -36,7 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
     if (location) {
         // console.log(location)
 
-        fetch(`http://localhost:3000/weather?address=${location}`).then( (response) => {
+        fetch(`/weather?address=${location}`).then( (response) => {
             response.json().then( (data) => {
                 if (data.error) {
                     contentMessage.textContent = data.error
