@@ -1,5 +1,4 @@
 const request = require('request')
-const chalk = require('chalk')
 
 const forecast = (latitude, longitude, callback) => {
     const url = `https://api.darksky.net/forecast/ed1d031a3733dcaf89cdc7ce8f8bc945/${latitude},${longitude}`
