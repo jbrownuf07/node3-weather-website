@@ -34,5 +34,11 @@ This command needs to be run within the directory of the project.
 
 Typically, prefix the name of the application with you last name followed by a hyphen, eg. `brown-weather-application`.
 
+# View all remote repositories
+
+`git remote`
+
 # Sharing the code repository on 3rd party servers and serve the project up
+
+`git push heroku master`
 
